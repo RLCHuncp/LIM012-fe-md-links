@@ -8,7 +8,7 @@
  ```
 
 ### Diagrama de Flujo
-![](src/img/diagrama_Flujo.svg)
+![](src/img/cli.png)
 
 ### Instrucción
 Para un correcto uso hay que seguir estas instrucciones.
