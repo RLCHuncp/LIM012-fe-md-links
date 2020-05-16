@@ -7,8 +7,6 @@
 
  ```
 
-
-ejecutar();
 ### Diagrama de Flujo
 ![](src/img/diagrama_Flujo.svg)
 
