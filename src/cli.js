@@ -10,4 +10,4 @@ optionsCli(path, options)
   .then((response) => {
     console.log(response);
   })
-  .catch(() => console.log('que pasó que pasó???'));
+  .catch(() => console.log('ERROR:', 'Revise la documentación'));
