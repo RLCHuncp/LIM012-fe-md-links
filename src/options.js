@@ -3,7 +3,7 @@ const { mdLinks } = require('./utils/index');
 const { stats } = require('./utils/stats');
 
 const optionsCli = (path, options) => {
-  if (options === '--validate' || options === '--v') {
+  if (options === '--validate' || options === '--v' || options === '--V') {
     return mdLinks(path, { validate: true })
       .then((data) => {
         let string = '';
@@ -18,11 +18,11 @@ const optionsCli = (path, options) => {
         return string;
       });
   }
-  if (options === '--stats' || options === '--s') {
+  if (options === '--stats' || options === '--s' || options === '--S') {
     return stats(path)
       .then((data) => `✔️  TOTAL: ${data.total}\n✔️  UNIQUE: ${data.unique}`);
   }
-  if (options === '--stats --validate' || options === '--s --v') {
+  if (options === '--stats --validate' || options === '--s --v' || options === '--S --V' || options === '--validate --stats') {
     return stats(path)
       .then((data) => `✔️  TOTAL: ${data.total}\n✔️  UNIQUE: ${data.unique}\n❌  BROKEN: ${data.broken}`);
   }

@@ -19,5 +19,4 @@ const mdLinks = (route, options) => {
   return promise;
 };
 
-// mdLinks('C:\\Users\\LUCY\\Desktop\\LIM012-fe-md-links\\test\\file-test\\README.md', { validate: true }).then((ele) => console.log(ele));
 module.exports = { mdLinks };
