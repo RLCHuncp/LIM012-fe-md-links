@@ -1,41 +1,57 @@
 ```
-  __  __            _       _                       _     _       _         C.H
- |  \/  | __ _ _ __| | ____| | _____      ___ __   | |   (_)_ __ | | _____
- | |\/| |/ _` | '__| |/ / _` |/ _ \ \ /\ / / '_ \  | |   | | '_ \| |/ / __|
- | |  | | (_| | |  |   < (_| | (_) \ V  V /| | | | | |___| | | | |   <\__ \
- |_|  |_|\__,_|_|  |_|\_\__,_|\___/ \_/\_/ |_| |_| |_____|_|_| |_|_|\_\___/
+  __  __            _       _
+ |  \/  | __ _ _ __| | ____| | _____      ___ __
+ | |\/| |/ _` | '__| |/ / _` |/ _ \ \ /\ / / '_ \
+ | |  | | (_| | |  |   < (_| | (_) \ V  V /| | | |
+ |_|  |_|\__,_|_|  |_|\_\__,_|\___/ \_/\_/ |_| |_|📦📦📦
 
  ```
+ La librería 'Marckdownd-Links'sirve para detectar los links que contiene un archivo con extensión .md, y hace cálculos estadísticos con respecto al total, unique y los links broken.
 
-### Diagrama de Flujo
-![](src/img/cli.png)
+## 📌**Diagramas de Flujo**
 
-### Instrucción
-Para un correcto uso hay que seguir estas instrucciones.
+![DF-API](src/img/api.png)
 
-### Instalación
+![DF-CLI](src/img/cli.png)
+📦
+## 📌**Instalación**
 
-* GLOBAL
+📍 **Global**
 ```
-npm install -g RLCHuncp/md-links
+npm install -g git://github.com/RLCHuncp/LIM012-fe-md-links
 ```
-* LOCAL
+📍 **Local**
 ```
-npm install RLCHuncp/md-links
+npm install git://github.com/RLCHuncp/LIM012-fe-md-links
 ```
-### Para usarlo
+## 📌**Para usarlo**
 
-* GLOBAL
-Ejecutamos **lim012-fe-md-links**
+1. Importa como módulo
+```
+const { mdLinks } = require('mdlinks');
 
-* LOCAL
-Añadir en el package.json
 ```
-"scripts": {
-    "lim012-fe-md-links": "./node_modules/.bin/lim012-fe-md-links"
-  },
+Por ejemplo:
+
 ```
-Ejecutamos con
-```
-npm run lim012-fe-md-links
+const { mdLinks } = require("mdlinks");
+
+mdLinks("./some/example.md")
+  .then(links => {
+    // => [{ href, text, file }]
+  })
+  .catch(console.error);
+
+mdLinks("./some/example.md", { validate: true })
+  .then(links => {
+    // => [{ href, text, file, status, ok }]
+  })
+  .catch(console.error);
+
+mdLinks("./some/dir")
+  .then(links => {
+    // => [{ href, text, file }]
+  })
+  .catch(console.error);
+
 ```
