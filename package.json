@@ -1,8 +1,8 @@
 {
-  "name": "lim012-fe-md-links",
+  "name": "mdlinks",
   "version": "1.0.0",
   "description": "Librería que lee y analiza archivos .md",
-  "main": "src/index.js",
+  "main": "./src/utils/index.js",
   "directories": {
     "test": "test"
   },
