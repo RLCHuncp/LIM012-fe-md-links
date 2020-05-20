@@ -1,5 +1,5 @@
 ```
-                 __  __            _       _
+                 __  __            _       _                       R.L.C.H
                 |  \/  | __ _ _ __| | ____| | _____      ___ __
                 | |\/| |/ _` | '__| |/ / _` |/ _ \ \ /\ / / '_ \
                 | |  | | (_| | |  |   < (_| | (_) \ V  V /| | | |
@@ -28,7 +28,7 @@ npm install git://github.com/RLCHuncp/LIM012-fe-md-links
 
 ✒️**JAVASCRIPT API**
 
-**Importa como módulo**
+- **Importa como módulo**
 ```javascript
 const { mdLinks } = require('mdlinks');
 
@@ -67,14 +67,14 @@ md-links <path-to-file> [options]
 |                Instrucciones                  |
 | ----------------------------------------------|
 |⚠️md-links `<path-to-file>`                       |
-|⚠️md-links `<path-to-file>` --validate ó --v        |
-|⚠️md-links `<path-to-file>` --stats ó --s                |
-|⚠️md-links `<path-to-file>` --stats --validate ó --s --v |
+|⚠️md-links `<path-to-file>` --validate        |
+|⚠️md-links `<path-to-file>` --stats               |
+|⚠️md-links `<path-to-file>` --stats --validate |
 
 Por ejemplo:
 
 ```
-🔰 Sin optión:
+🔰 Sin options:
 ```
 
 ```javascript
@@ -85,7 +85,7 @@ $ md-links 'probando/README.md'
 ```
 
 ```
-🔰 --validate
+🔰 --validate || --v || --V
 ```
 
 ```javascript
@@ -105,7 +105,7 @@ $ md-links 'probando/README.md' --validate
 ```
 
 ```
-🔰 --stats
+🔰 --stats || --s || --S
 ```
 
 ```javascript
@@ -114,7 +114,7 @@ $ md-links 'probando/README.md' --stats
   ✔️  UNIQUE: 5
 ```
 ```
-🔰 --stats --validate
+🔰 --stats --validate || --s --v || --S --V ||--validate --stats
 ```
 
 ```javascript
