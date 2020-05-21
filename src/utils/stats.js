@@ -16,24 +16,3 @@ const stats = (path) => mdLinks(path, { validate: true })
   });
 
 module.exports = { stats };
-// const stats = (links) => {
-//   const href = links.map((ele) => ele.href);
-//   const uniqueLinks = new Set(href);
-//   return {
-//     total: links.length,
-//     unique: uniqueLinks.size,
-//   };
-// };
-// 8. AGREGANDO CUÁNTOS LINKS ROTOS HAY --> O=TOTAL:3 UNIQUE:3 BROKEN:1
-// const statsAndValidate = (arrlink) => {
-//   const brokenLinks = arrlink.filter((ele) => ele.status === 404);
-//   const statsA = `
-//   ${stats(arrlink)},
-//   ${'broken'}: ${brokenLinks.length},
-//   `;
-//   return statsA;
-// };
-// module.exports = {
-//   stats,
-//   statsAndValidate,
-// };

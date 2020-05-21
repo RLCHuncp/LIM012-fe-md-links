@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "chalk": "^4.0.0",
+    "fetch-mock": "^9.9.0",
     "figlet": "^1.4.0",
     "marked": "^1.1.0",
     "node-fetch": "^2.6.0"
