@@ -2,10 +2,10 @@
 const { mdLinks } = require('./index');
 // 7. MOSTRAR ESTADÍSTICAS I=HREF,TEXT,FILE O=TOTAL:3 UNIQUE:3
 const stats = (path) => mdLinks(path, { validate: true })
-  .then((dataReturn) => {
-    const arrayOfFailLinks = dataReturn.filter((linkObject) => linkObject.statusText === 'Fail');
+  .then((data) => {
+    const arrayOfFailLinks = data.filter((linkObject) => linkObject.statusText === 'Fail');
     const arrayHref = [];
-    dataReturn.forEach((linkObject) => arrayHref.push(linkObject.href));
+    data.forEach((linkObject) => arrayHref.push(linkObject.href));
     const arrayHrefUniques = new Set(arrayHref);
     const answerObject = {
       total: arrayHref.length,
