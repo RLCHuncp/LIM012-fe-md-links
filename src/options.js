@@ -9,9 +9,9 @@ const optionsCli = (path, options) => {
         let string = '';
         data.forEach((ele) => {
           string += `
-          'HREF:' ${ele.href}
-          'TEXT:' ${ele.text}
-          'PATH:' ${ele.path}
+          HREF: ${ele.href}
+          TEXT: ${ele.text}
+          PATH: ${ele.path}
           ${chalk.yellow.inverse('STATUS:')} ${ele.status}
           ${chalk.yellow.inverse('STATUSTEXT:')} ${ele.statusText}\n`;
         });
